@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Engagement Photography",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor numquam commodi enim distinctio cupiditate. Pariatur vero molestiae sunt ratione unde.",
+        "price": 100,
+        "img": "https://i.ibb.co/zXMmbJ7/engagement.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Wedding Photography",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor numquam commodi enim distinctio cupiditate. Pariatur vero molestiae sunt ratione unde.",
+        "price": 200,
+        "img": "https://i.ibb.co/6stzbxd/wedding.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Couple-tour Photography",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor numquam commodi enim distinctio cupiditate. Pariatur vero molestiae sunt ratione unde.",
+        "price": 150,
+        "img": "https://i.ibb.co/Kj5CshY/couple-tour.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Motherhood Photography",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor numquam commodi enim distinctio cupiditate. Pariatur vero molestiae sunt ratione unde.",
+        "price": 170,
+        "img": "https://i.ibb.co/tzGHZTZ/motherhood.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Newborn Photography",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor numquam commodi enim distinctio cupiditate. Pariatur vero molestiae sunt ratione unde.",
+        "price": 120,
+        "img": "https://i.ibb.co/NFnBhDP/newborn.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Anniversary Photography",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor numquam commodi enim distinctio cupiditate. Pariatur vero molestiae sunt ratione unde.",
+        "price": 180,
+        "img": "https://i.ibb.co/DD28fHC/anniversary.jpg"
+    }
+]

@@ -13,18 +13,21 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
 
     const navigate = useNavigate();
-    // const location = useLocation();
+    const location = useLocation();
     const emailRef = useRef('');
     const passwordRef = useRef('');
+
     const handleSubmit = event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         signInWithEmailAndPassword(email, password);
     }
-    // let from = location.state.from.pathname || "/";
+
+    let from = location?.state?.from.pathname || "/";
+
     if (user) {
-        navigate('/home');
+        navigate(from, { replace: true });
     }
     const navigateRegister = event => {
         navigate(`/register`);

@@ -1,14 +1,36 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
 
 const Register = () => {
-    
+
+    const emailRef = useRef('');
+    const passwordRef = useRef('');
+    const userNameRef = useRef('');
+
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth);
+
     const navigate = useNavigate();
-    const handleSubmit = event => {
-        event.preventDefault();
-    }
+
     const navigateLogin = event => {
         navigate(`/login`);
+    }
+    const handleSubmit = event => {
+        event.preventDefault();
+        const name = userNameRef.current.value;
+        const email = emailRef.current.value;
+        const password = passwordRef.current.value;
+        createUserWithEmailAndPassword(email, password);
+    }
+
+    if(user){
+        navigate('/home');
     }
     return (
 
@@ -19,16 +41,16 @@ const Register = () => {
                     <div>
                         <div className="mb-3">
                             <label htmlFor="name" className="form-label">Your Name</label>
-                            <input type="text" className="form-control" id="exampleInputName" required />
+                            <input type="text" ref={userNameRef} className="form-control" id="exampleInputName" required />
                         </div>
                         <div className="mb-3">
                             <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-                            <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required />
+                            <input type="email" ref={emailRef} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required />
                             <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
                         </div>
                         <div className="mb-3">
                             <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                            <input type="password" className="form-control" id="exampleInputPassword1" required />
+                            <input type="password" ref={passwordRef} className="form-control" id="exampleInputPassword1" required />
                         </div>
                         <div className="mb-3 form-check">
                             <input type="checkbox" className="form-check-input" id="exampleCheck1" />

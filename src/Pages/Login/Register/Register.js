@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import Loading from '../../Shared/Loading/Loading';
 
 const Register = () => {
 
@@ -16,7 +17,8 @@ const Register = () => {
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
-    const [updateProfile, updating, error1] = useUpdateProfile(auth);
+
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
     const navigate = useNavigate();
 
@@ -34,9 +36,11 @@ const Register = () => {
         alert('Updated profile');
         navigate('/home');
     }
-    
-    return (
+    if (loading || updating) {
+        return <Loading></Loading>
+    }
 
+    return (
         <div className="container">
             <div className='w-50 py-5 mx-auto'>
                 <h1 className='text-center pt-3'>Please Register</h1>

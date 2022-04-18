@@ -1,0 +1,6 @@
+.img-style{
+    transition: 0.8s;
+}
+.img-style:hover{
+    transform: scale(1.05);
+}

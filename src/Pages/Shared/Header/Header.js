@@ -27,6 +27,9 @@ const Header = () => {
                         <li className="nav-item">
                             <Link className="nav-link fw-bold fs-5 me-1" style={{color:'#ea8685'}} to="/about">About</Link>
                         </li>
+                        <li className="nav-item">
+                            <Link className="nav-link fw-bold fs-5 me-1" style={{color:'#ea8685'}} to="/blogs">Blogs</Link>
+                        </li>
                         {/* if user logged in  */}
                         {
                             user ?

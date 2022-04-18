@@ -1,7 +1,91 @@
-.carousel-des{
-    padding-bottom: 250px;
-    padding-right: 250px;
-    color: black;
-    font-weight: 700;
-    font-size: 40px;
+/* vanilla css for banners  */
+.carousel-des1 h1 {
+    padding-bottom: 350px;
+    padding-right: 370px;
+    color: #ee7775;
+    font-weight: 500;
+    font-size: 65px;
+}
+
+.carousel-des2 h1 {
+    padding-bottom: 100px;
+    padding-right: 280px;
+    color: #ee7775;
+    font-weight: 500;
+    font-size: 65px;
+}
+
+.carousel-des3 h1 {
+    padding-bottom: 90px;
+    padding-left: 250px;
+    color: #ee7775;
+    font-weight: 500;
+    font-size: 65px;
+}
+
+@media only screen and (max-width: 768px) {
+    .carousel-des1 h1 {
+        padding: 0;
+        color: #ee7775;
+        /* font-weight: 600; */
+        font-size: 20px;
+    }
+
+    .carousel-des2 h1 {
+        padding: 0;
+        color: #ee7775;
+        /* font-weight: 600; */
+        font-size: 20px;
+    }
+
+    .carousel-des3 h1 {
+        padding: 0;
+        color: #ee7775;
+        /* font-weight: 600; */
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 280px) {
+    .carousel-des1 h1 {
+        padding: 0;
+        color: #ee7775;
+        /* font-weight: 600; */
+        font-size: 12px;
+    }
+
+    .carousel-des2 h1 {
+        padding: 0;
+        color: #ee7775;
+        /* font-weight: 600; */
+        font-size: 12px;
+    }
+
+    .carousel-des3 h1 {
+        padding: 0;
+        color: #ee7775;
+        /* font-weight: 600; */
+        font-size: 12px;
+    }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+	.carousel-des1 h1 {
+        padding: 0;
+        color: #ee7775;
+        /* font-weight: 600; */
+        font-size: 30px;
+    }
+
+    .carousel-des2 h1 {
+        padding: 0;
+        color: #ee7775;
+        /* font-weight: 600; */
+        font-size: 30px;
+    }
+
+    .carousel-des3 h1 {
+        padding: 0;
+        color: #ee7775;
+        /* font-weight: 600; */
+        font-size: 30px;
+    }
 }

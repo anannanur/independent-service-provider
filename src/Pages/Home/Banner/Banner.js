@@ -1,7 +1,7 @@
 import React from 'react';
-import banner1 from '../../../images/banner/banner1.jpg';
-import banner2 from '../../../images/banner/banner2.jpg';
-import banner3 from '../../../images/banner/banner3.jpg';
+import banner1 from '../../../images/banner/banner-1.jpg';
+import banner2 from '../../../images/banner/banner-2.jpg';
+import banner3 from '../../../images/banner/banner-3.jpg';
 import './Banner.css';
 
 const Banner = () => {
@@ -16,23 +16,20 @@ const Banner = () => {
                 <div className="carousel-inner">
                     <div className="carousel-item active">
                         <img src={banner1} className="d-block w-100" alt="..." />
-                        <div className="carousel-caption carousel-des">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
+                        <div className="carousel-caption carousel-des1">
+                            <h1>I photograph weddings with style and beauty...</h1>
                         </div>
                     </div>
                     <div className="carousel-item">
                         <img src={banner2} className="d-block w-100" alt="..." />
-                        <div className="carousel-caption  carousel-des">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
+                        <div className="carousel-caption  carousel-des2">
+                            <h1>Let's create moments to remember...</h1>
                         </div>
                     </div>
                     <div className="carousel-item">
                         <img src={banner3} className="d-block w-100" alt="..." />
-                        <div className="carousel-caption carousel-des">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
+                        <div className="carousel-caption carousel-des3">
+                            <h1>I capture emotions,not images...</h1>
                         </div>
                     </div>
                 </div>

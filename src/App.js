@@ -10,7 +10,7 @@ import NotFound from './Pages/Shared/NotFound/NotFound';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
-// import Service from './Pages/Home/Service/Service';
+
 
 function App() {
   return (

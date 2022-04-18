@@ -1,7 +1,8 @@
 import React, { useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Register = () => {
 
@@ -14,24 +15,26 @@ const Register = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [updateProfile, updating, error1] = useUpdateProfile(auth);
 
     const navigate = useNavigate();
 
     const navigateLogin = event => {
         navigate(`/login`);
     }
-    const handleSubmit = event => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        const name = userNameRef.current.value;
+        const displayName = userNameRef.current.value;
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        createUserWithEmailAndPassword(email, password);
-    }
 
-    if(user){
+        await createUserWithEmailAndPassword(email, password);
+        await updateProfile({ displayName });
+        alert('Updated profile');
         navigate('/home');
     }
+    
     return (
 
         <div className="container">
@@ -41,7 +44,7 @@ const Register = () => {
                     <div>
                         <div className="mb-3">
                             <label htmlFor="name" className="form-label">Your Name</label>
-                            <input type="text" ref={userNameRef} className="form-control" id="exampleInputName" required />
+                            <input type="text" ref={userNameRef} className="form-control" id="exampleInputName" />
                         </div>
                         <div className="mb-3">
                             <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
@@ -59,7 +62,9 @@ const Register = () => {
                         <button type="submit" className="btn btn-primary">Submit</button>
                     </div>
                     <p>Already have an account? <Link onClick={navigateLogin} to="/login" className='text-primary text-decoration-none pe-auto'>Please Login</Link></p>
+
                 </form>
+                <SocialLogin></SocialLogin>
             </div>
         </div>
 

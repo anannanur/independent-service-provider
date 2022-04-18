@@ -1,7 +1,8 @@
 import React, { useRef } from 'react';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Login = () => {
 
@@ -11,6 +12,9 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(
+        auth
+    );
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -26,11 +30,21 @@ const Login = () => {
 
     let from = location?.state?.from.pathname || "/";
 
+    let errorMessage;
+    if (error) {
+        errorMessage = <p className='text-danger'>Error: {error.message}</p>
+    }
     if (user) {
         navigate(from, { replace: true });
     }
     const navigateRegister = event => {
         navigate(`/register`);
+    }
+    const resetPassword = async () => {
+        const email = emailRef.current.value;
+        await sendPasswordResetEmail(email);
+        alert('Sent email');
+
     }
     return (
         <div className="container">
@@ -40,7 +54,7 @@ const Login = () => {
                     <div>
                         <div className="mb-3">
                             <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-                            <input ref={emailRef} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required />
+                            <input ref={emailRef} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
                             <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
                         </div>
                         <div className="mb-3">
@@ -53,9 +67,15 @@ const Login = () => {
                         </div>
                         <button type="submit" className="btn btn-primary">Submit</button>
                     </div>
+                    {errorMessage}
                     <p>New to Wed_Bird? <Link onClick={navigateRegister} to="/register" className='text-primary text-decoration-none pe-auto'>Please Register</Link></p>
+                    <p>Forgot Password? <Link onClick={resetPassword} to="/register" className='text-primary text-decoration-none pe-auto'>Please Reset</Link></p>
+
                 </form>
+
+                <SocialLogin></SocialLogin>
             </div>
+
         </div>
     );
 };

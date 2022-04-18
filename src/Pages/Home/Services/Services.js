@@ -4,6 +4,7 @@ import './Services.css';
 
 const Services = () => {
 
+    // loading services data 
     const [services, setServices] = useState([]);
     useEffect(() => {
         fetch('services.json')
@@ -12,11 +13,12 @@ const Services = () => {
     }, [])
 
     return (
-        <div id="services" className='service-container py-5'>
-            <h1>Services:{services.length}</h1>
-            <div className="container ">
+        <div id="services" className='service-container bg-dark py-5'>
+            <h1 className='text-center fw-bold fs-1'>My Services</h1>
+            <div className="container py-5">
                 <div className="container">
                         <div className="row row-cols-1 row-cols-md-3 g-5">
+                            {/* passing single data to service component */}
                         {
                             services.map(service => <Service key={service.id} service={service}></Service>)
                         }

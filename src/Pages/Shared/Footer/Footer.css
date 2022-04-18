@@ -3,3 +3,6 @@ footer h1{
     color: rgb(246, 107, 8);
     font-weight: 700;
 }
+.footer-style{
+    border-top: 2px dotted #ea8685;
+}

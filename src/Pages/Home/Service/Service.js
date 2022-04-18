@@ -12,14 +12,14 @@ const Service = ({ service }) => {
     return (
 
         <div className="col d-flex justify-content-center">
-            <div className="card bg-secondary shadow-lg text-white card-style" >
+            <div className="card shadow-lg card-style bg-dark">
                 <img src={img} className="card-img-top" alt="..." />
-                <div className="card-body">
-                    <h5 className="card-title">{name}</h5>
-                    <p className="card-text">{description}</p>
-                    <p className="card-text">${price}</p>
+                <div className="card-body bg-dark text-center">
+                    <h4 className="p-2 fw-bold text-danger" style={{color: '#ee7775'}}>{name}</h4>
+                    <p className="card-text text-secondary">{description}</p>
+                    <p className="card-text text-warning fw-bold">${price}</p>
                 </div>
-                <button onClick={() => navigateToCheckOut(id)} className='btn btn-primary'>Book Now</button>
+                <button onClick={() => navigateToCheckOut(id)} className='btn btn-danger'>Book Now</button>
             </div>
         </div>
 

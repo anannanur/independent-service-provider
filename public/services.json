@@ -2,43 +2,43 @@
     {
         "id": 1,
         "name": "Engagement Photography",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor numquam commodi enim distinctio cupiditate. Pariatur vero molestiae sunt ratione unde.",
+        "description": "To keep your beautiful moments captured of your engagement, book this service. I promise, you will be so happy when you see those beautiful pictures!!",
         "price": 100,
-        "img": "https://i.ibb.co/zXMmbJ7/engagement.jpg"
+        "img": "https://i.ibb.co/FkrkPFx/pexels-hebert-santo-6514287.jpg"
     },
     {
         "id": 2,
         "name": "Wedding Photography",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor numquam commodi enim distinctio cupiditate. Pariatur vero molestiae sunt ratione unde.",
+        "description": "For amazing wedding photography you can choose this service. I can ensure you that you will highly amused to see your amazing wedding photographs!!",
         "price": 200,
-        "img": "https://i.ibb.co/6stzbxd/wedding.jpg"
+        "img": "https://i.ibb.co/kyzhGTQ/pexels-jonathan-borba-3292701.jpg"
     },
     {
         "id": 3,
         "name": "Couple-tour Photography",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor numquam commodi enim distinctio cupiditate. Pariatur vero molestiae sunt ratione unde.",
+        "description": "Most of the couple want to save their emotional moments, To save your emotion for lifetime, you can take this service. After long years, you can see your moments are still vivacious.",
         "price": 150,
-        "img": "https://i.ibb.co/Kj5CshY/couple-tour.jpg"
+        "img": "https://i.ibb.co/3BrGNYc/pexels-asad-photo-maldives-1024984.jpg"
     },
     {
         "id": 4,
         "name": "Motherhood Photography",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor numquam commodi enim distinctio cupiditate. Pariatur vero molestiae sunt ratione unde.",
+        "description": "Motherhood is a best time for a woman in her whole life. To capture this valuable moments forever, you can book this one. These picture will take back you in your future..",
         "price": 170,
-        "img": "https://i.ibb.co/tzGHZTZ/motherhood.jpg"
+        "img": "https://i.ibb.co/WxVQKnM/pexels-jonathan-borba-2917339.jpg"
     },
     {
         "id": 5,
         "name": "Newborn Photography",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor numquam commodi enim distinctio cupiditate. Pariatur vero molestiae sunt ratione unde.",
+        "description": "Newborn baby's tiny 5 fingers can steal anyone's mind. I will capture your sweet moments. This photos will make your baby to feel precious at her/his future life",
         "price": 120,
-        "img": "https://i.ibb.co/NFnBhDP/newborn.jpg"
+        "img": "https://i.ibb.co/KhKF9YY/pexels-kelvin-octa-1973270.jpg"
     },
     {
         "id": 6,
         "name": "Anniversary Photography",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor numquam commodi enim distinctio cupiditate. Pariatur vero molestiae sunt ratione unde.",
+        "description": "I will not take images, I will capture your happiness in your anniversary day. I capture your moments elegantly so that you will feel the same in future.",
         "price": 180,
-        "img": "https://i.ibb.co/DD28fHC/anniversary.jpg"
+        "img": "https://i.ibb.co/h1jsqyK/pexels-cottonbro-4684265.jpg"
     }
 ]

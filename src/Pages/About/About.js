@@ -10,7 +10,7 @@ const About = () => {
                     <div className="row">
                         <div class="col-md-8">
                             <div class="card-body ms-1">
-                                <h4 style={{ color: '#FF79C6' }} class="fw-bold card-title mt-5">About me</h4>
+                                <h4 style={{ color: '#ea8685' }} class="fw-bold card-title mt-5">About me</h4>
                                 <p class="card-text text-muted mt-1">Hi!! This is Humayra Nur Ananna, a web-development learner. Initially, I want to be a junior web developer. My future goal is to become a full stack web developer.</p>
                             </div>
                         </div>

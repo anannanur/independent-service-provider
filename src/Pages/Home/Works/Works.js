@@ -10,39 +10,38 @@ import img7 from '../../../images/works/work-7.jpg';
 
 const Works = () => {
     return (
-        <div className="py-5" style={{backgroundColor: 'black'}}>
+        <div className="py-5 works-container" style={{ backgroundColor: 'black' }}>
             <div className="container py-5">
-                <div>
-                    <h1 className="text-center pb-5 fw-bold mb-3" style={{color:'#ee7775'}}>My Works</h1>
+                <div className='title'>
+                    <h1 className="text-center pb-5 fw-bold mb-4" style={{ color: '#ee7775' }}>My Latest Works</h1>
                 </div>
                 <div className="row">
                     <div className="col-12 col-md-3 mt-2 mt-md-0">
-                        <img src={img1} alt="" className='img-fluid img-style'/>
+                        <img src={img1} alt="" className='img-fluid img-style' />
                     </div>
                     <div className="col-12 col-md-3">
-                        <img src={img2} alt="" className='img-fluid img-style'/>
+                        <img src={img2} alt="" className='img-fluid img-style' />
                     </div>
                     <div className="col-12 col-md-3">
-                        <img src={img3} alt="" className='img-fluid img-style'/>
+                        <img src={img3} alt="" className='img-fluid img-style' />
                     </div>
                     <div className="col-12 col-md-3">
-                        <img src={img4} alt="" className='img-fluid img-style'/>
+                        <img src={img4} alt="" className='img-fluid img-style' />
                     </div>
-                    
+
                 </div>
                 <div className="container">
-                <div className="row mt-4">
-                    <div className="col-12 col-md-4">
-                        <img src={img5} alt="" className='img-fluid img-style'/>
+                    <div className="row mt-4">
+                        <div className="col-12 col-md-4">
+                            <img src={img5} alt="" className='img-fluid img-style' />
+                        </div>
+                        <div className="col-12 col-md-4">
+                            <img src={img6} alt="" className='img-fluid img-style' />
+                        </div>
+                        <div className="col-12 col-md-4">
+                            <img src={img7} alt="" className='img-fluid img-style' />
+                        </div>
                     </div>
-                    <div className="col-12 col-md-4">
-                        <img src={img6} alt="" className='img-fluid img-style'/>
-                    </div>
-                    <div className="col-12 col-md-4">
-                        <img src={img7} alt="" className='img-fluid img-style'/>
-                    </div>
-                    
-                </div>
                 </div>
             </div>
         </div>

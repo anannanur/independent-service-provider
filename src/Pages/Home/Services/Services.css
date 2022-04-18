@@ -1,4 +1,14 @@
-
+/* vanilla css for service section  */
 .service-container h1{
     color: #ee7775;
+    position: relative;
+}
+.title h1::after{    
+        position: absolute;
+        content: "";
+        top: 110%;
+        left: 48%;
+        width: 70px;
+        height: 2px;
+        background-color:  #ee7775;
 }
